@@ -1,0 +1,13 @@
+<div class="admin-container">
+    <app-sidebar class="app-sidebar"></app-sidebar>
+
+    <div class="main-content">
+        <div class="admin-interface">
+            <div *ngIf="course">
+                <h2>{{ course.title }}</h2>
+                <p>Price: {{ course.price }}</p>
+            </div>
+            <button (click)="goBack()" class="btn btn-secondary">Back to Courses</button>
+        </div>
+    </div>
+</div>

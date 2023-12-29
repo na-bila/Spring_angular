@@ -1,0 +1,36 @@
+<div class="admin-container">
+    <app-sidebar class="app-sidebar"></app-sidebar>
+    <div class="main-content">
+        <div class="admin-interface">
+            <h1>Admin Interface</h1>
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let course of courses">
+                        <td>{{ course.id }}</td>
+                        <td>{{ course.title }}</td>
+                        <td>{{ course.price | currency:'USD':'symbol':'1.2-2' }}</td>
+                        <td>
+                            <button mat-icon-button color="accent" routerLink="/courses/{{ course.id }}">
+                                <mat-icon>visibility</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" routerLink="/update/{{ course.id }}">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="warn" (click)="deleteCourse(course.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

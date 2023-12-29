@@ -1,0 +1,25 @@
+<div class="admin-container">
+    <app-sidebar class="app-sidebar"></app-sidebar>
+
+    <div class="main-content">
+        <div class="admin-interface">
+            <h1>Create New Course</h1>
+
+            <form (submit)="createCourse()">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" [(ngModel)]="newCourse.title" name="title" class="form-control"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" [(ngModel)]="newCourse.price" name="price" class="form-control"
+                        required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Course</button>
+            </form>
+        </div>
+    </div>
+</div>

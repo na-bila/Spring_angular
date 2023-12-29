@@ -1,0 +1,23 @@
+<div class="admin-container">
+    <app-sidebar class="app-sidebar"></app-sidebar>
+
+    <div class="main-content">
+        <div class="admin-interface">
+            <h1>Edit Course</h1>
+
+            <form (ngSubmit)="updateCourse()">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" [(ngModel)]="course.title" name="title" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" [(ngModel)]="course.price" name="price" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update Course</button>
+            </form>
+        </div>
+    </div>
+</div>
